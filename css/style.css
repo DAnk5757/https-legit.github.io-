@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+body {
+  background: #000;
+  font-family: 'Jost', sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 24px 8px 0;
+}
+.container > * { width: 100%; margin: 8px 0; }
+.swiper {
+  display: hidden;
+  position: relative;
+  border-radius: 12px;
+  background: none;
+  height: 196px;
+  overflow: hidden;
+}
+.swiper-slide {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.about {
+  display: flex;
+  height: max-content;
+}
+.about > * {
+  padding: 4px;
+}
+.about > .avatarimg {
+  width: 96px;
+  height: 96px; 
+  border-radius: 50%;
+}
+.about > .details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about > .details > .spotifyname { display: flex; font-size: 0.8em; font-weight: bold; }
+
+.about > .details > .name { display: flex; font-size: 1.5em; font-weight: bold; }
+.about > .details > .name > .altname { margin-left: 4px; opacity: 0.2; }
+.about > .details > .status { font-size: 1.25em; }
+.socials > .lnks { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.socials > .lnks {
+	width: 100%;
+}
+.socials > .lnks > * {
+  /* flex-basis: 25%; */
+  flex-basis: 32%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px;
+  margin: 4px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.socials > .lnks > *:hover {
+  background: rgba(255, 255, 255, .1);
+}
+
+@media screen and (max-width: 640px) {
+  .socials > .lnks > * {
+      flex-basis: 100%;
+  }
+}
+.socials > .lnks > * > svg {
+  margin-right: 12px;
+}
+.music {
+  display: none;
+}
+.music.active {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.music > .wtitle {
+  font-weight: bold;
+}
+.music > .wrapper {
+  display: flex;
+  padding: 4px;
+}
+.music > .wrapper > .cover-wrapper {
+  position: relative;
+  border-radius: 8px;
+  width: 64px;
+  height: 64px;
+  margin-right: 8px;
+}
+.music > .wrapper > .cover-wrapper > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 8px;
+  width: 64px;
+  height: 64px;
+}
+.music > .wrapper > .cover-wrapper > div {
+  filter: blur(12px);
+}
+.music > .wrapper > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.music > .wrapper > div > .title {
+  font-weight: bold;
+}
+.info {
+  background: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Lato';
+  margin: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+
+.info:hover {
+  background: orange;
+}
+.banktext {
+  font-weight: bold;
+}
+
+.spotifyimg {
+  width: 76px;
+  height: 76px;
+  padding-top: 5px; 
+  border-radius: 0%;
+}
+
+.spotifylogo {
+  width: 17px;
+  height: 17px;
+  margin-left: 5px;
+}
+
+
+::-webkit-progress-bar {
+    background: grey;
+}
+::-webkit-progress-value {
+    background: white;
+}
+::-moz-progress-bar {
+    background: white;
+}
+.spotifytime {
+  color: white;
+}
